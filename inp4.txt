@@ -1,0 +1,44 @@
+<ss:Workbook>
+  <ss:Styles>
+    <ss:Style ss:ID="s1">
+    </ss:Style>
+    <ss:Style  ss:ID="s2">
+    </ss:Style>
+  </ss:Styles>
+  <ss:Worksheet  ss:Name="sheet1" >
+    <ss:Table ss:StyleID="s1">
+      <ss:Column ss:StyleID="s1"/>
+      <ss:Column ss:StyleID ="s1"/>
+      <ss:Row>
+        <ss:Cell>
+          <ss:Data ss:Type="Number">1233</ss:Data>
+        </ss:Cell>
+        <ss:Cell>
+          <ss:Data ss:Type="String">string data</ss:Data>
+        </ss:Cell>
+      </ss:Row>
+      <ss:Row>
+      </ss:Row>
+    </ss:Table>
+    <ss:Table  ss:StyleID="s2">
+    </ss:Table>
+  </ss:Worksheet>
+  <ss:Worksheet  ss:Name="sheet2" ss:Protected="a" >
+    <ss:Table ss:StyleID="s2">
+      <ss:Column ss:StyleID="s2"/>
+      <ss:Column ss:StyleID ="s2"/>
+      <ss:Row>
+        <ss:Cell>
+          <ss:Data ss:Type="Number">1233</ss:Data>
+        </ss:Cell>
+        <ss:Cell>
+          <ss:Data ss:Type="String">string data</ss:Data>
+        </ss:Cell>
+      </ss:Row>
+      <ss:Row>
+      </ss:Row>
+    </ss:Table>
+    <ss:Table  ss:StyleID="s1">
+    </ss:Table>
+  </ss:Worksheet>
+</ss:Workbook>
