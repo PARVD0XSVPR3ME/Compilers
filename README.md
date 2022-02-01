@@ -9,7 +9,7 @@ lexical analyzer generator and the **GNU Bison** parser generator.
 
 ## Backus–Naur form (BNF)
 
-```
+```bnf
 <workbook> ::= BEGIN_WORKBOOK CLOSETAG <styles> <worksheet> END_WORKBOOK CLOSETAG
    | <comments> BEGIN_WORKBOOK CLOSETAG <styles> <worksheet> END_WORKBOOK CLOSETAG
    | BEGIN_WORKBOOK CLOSETAG <styles> <worksheet> END_WORKBOOK CLOSETAG <comments>
@@ -18,36 +18,35 @@ lexical analyzer generator and the **GNU Bison** parser generator.
    | <comments> BEGIN_WORKBOOK CLOSETAG <comments> <styles> <worksheet> END_WORKBOOK CLOSETAG
    | BEGIN_WORKBOOK CLOSETAG <comments> <styles> <worksheet> END_WORKBOOK CLOSETAG <comments>
    | <comments> BEGIN_WORKBOOK CLOSETAG <comments> <styles> <worksheet> END_WORKBOOK CLOSETAG <comments>
+
 <styles> ::= /*empty*/
-| <styles> BEGIN_STYLES CLOSETAG <style> END_STYLES CLOSETAG <comments>
-| <styles> BEGIN_STYLES CLOSETAG <style> END_STYLES CLOSETAG
-| <styles> BEGIN_STYLES CLOSETAG <style> <comments> END_STYLES CLOSETAG
-<comments>
-| <styles> BEGIN_STYLES CLOSETAG <style> <comments> END_STYLES CLOSETAG
+   | <styles> BEGIN_STYLES CLOSETAG <style> END_STYLES CLOSETAG <comments>
+   | <styles> BEGIN_STYLES CLOSETAG <style> END_STYLES CLOSETAG
+   | <styles> BEGIN_STYLES CLOSETAG <style> <comments> END_STYLES CLOSETAG <comments>
+   | <styles> BEGIN_STYLES CLOSETAG <style> <comments> END_STYLES CLOSETAG
+
 <style> ::= /*empty*/
-| <style> BEGIN_STYLE ID_EQUALS_QUOTE ID_STRING QUOTE CLOSETAG END_STYLE
-CLOSETAG
-| <style> <comments> BEGIN_STYLE ID_EQUALS_QUOTE ID_STRING QUOTE CLOSETAG
-END_STYLE CLOSETAG
-| <style> BEGIN_STYLE ID_EQUALS_QUOTE ID_STRING QUOTE CLOSETAG <comments>
-END_STYLE CLOSETAG
-| <style> <comments> BEGIN_STYLE ID_EQUALS_QUOTE ID_STRING QUOTE CLOSETAG
-<comments> END_STYLE CLOSETAG
+   | <style> BEGIN_STYLE ID_EQUALS_QUOTE ID_STRING QUOTE CLOSETAG END_STYLE CLOSETAG
+   | <style> <comments> BEGIN_STYLE ID_EQUALS_QUOTE ID_STRING QUOTE CLOSETAG END_STYLE CLOSETAG
+   | <style> BEGIN_STYLE ID_EQUALS_QUOTE ID_STRING QUOTE CLOSETAG <comments> END_STYLE CLOSETAG
+   | <style> <comments> BEGIN_STYLE ID_EQUALS_QUOTE ID_STRING QUOTE CLOSETAG <comments> END_STYLE CLOSETAG
+
 <worksheet> ::= <worksheet_cont>
-| <worksheet> <worksheet_cont>
-<worksheet_cont> ::= BEGIN_WORKSHEET <worksheet_attr> CLOSETAG <table>
-END_WORKSHEET CLOSETAG
-| BEGIN_WORKSHEET <worksheet_attr> CLOSETAG <table> END_WORKSHEET
-CLOSETAG <comments>
-| BEGIN_WORKSHEET <worksheet_attr> CLOSETAG <comments> <table>
-END_WORKSHEET CLOSETAG
-| BEGIN_WORKSHEET <worksheet_attr> CLOSETAG <comments> <table>
-END_WORKSHEET CLOSETAG <comments>
+   | <worksheet> <worksheet_cont>
+
+<worksheet_cont> ::= BEGIN_WORKSHEET <worksheet_attr> CLOSETAG <table> END_WORKSHEET CLOSETAG
+   | BEGIN_WORKSHEET <worksheet_attr> CLOSETAG <table> END_WORKSHEET CLOSETAG <comments>
+   | BEGIN_WORKSHEET <worksheet_attr> CLOSETAG <comments> <table> END_WORKSHEET CLOSETAG
+   | BEGIN_WORKSHEET <worksheet_attr> CLOSETAG <comments> <table> END_WORKSHEET CLOSETAG <comments>
+
 <worksheet_attr> ::= <name> <protected>
-| <protected> <name>
-| <name>
+   | <protected> <name>
+   | <name>
+
 <name> ::= NAME_EQUALS_QUOTE STRING QUOTE
+
 <protected> ::= PROTECTED_EQUALS_QUOTE BOOLEAN QUOTE
+
 <table> ::= /*empty*/
 | <table> BEGIN_TABLE <table_attr> CLOSETAG <table_elements> END_TABLE CLOSETAG
 | <table> BEGIN_TABLE <table_attr> CLOSETAG <table_elements> END_TABLE CLOSETAG
