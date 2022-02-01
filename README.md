@@ -7,11 +7,11 @@ href="https://github.com/PARVD0XSVPR3ME">Panagiotis Charalampopoulos</a>.
 It's an implementation of a parser for a **subgroup of the Microsoft Excel XML format** using the **Flex**
 lexical analyzer generator and the **GNU Bison** parser generator.
 
-### Compilation Instructions
+## Compilation Instructions
 A `Makefile` is included so assuming `gcc` is installed you can simply run `make` inside this repo to generate
 the `parser` executable.
 
-### Usage
+## Usage
 
 `./parser <input_file>`
 
