@@ -8,7 +8,7 @@ href="https://github.com/PARVD0XSVPR3ME">Panagiotis Charalampopoulos</a>.
 
 - [Project Objectives](#project-objectives)
 - [Subgroup of the Microsoft Excel XML format](#subgroup-of-the-microsoft-excel-xml-format)
-- [Backus–Naur form (BNF) Grammar](#backus-naur-form-grammar)
+- [Backus–Naur form (BNF) Grammar](#backus-naur-form-bnf-grammar)
 - [Compilation Instructions](#compilation-instructions)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
@@ -80,7 +80,7 @@ The following rules apply:
 
 
 
-## Backus Naur form Grammar
+## Backus Naur form (BNF) Grammar
 
 ```
 <workbook> ::= BEGIN_WORKBOOK CLOSETAG <styles> <worksheet> END_WORKBOOK CLOSETAG
