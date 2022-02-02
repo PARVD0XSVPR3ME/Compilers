@@ -4,13 +4,14 @@ This repository contains the course project for the **Principles Of Programming 
 university course for the academic period of 2018-2019 done by <a
 href="https://github.com/PARVD0XSVPR3ME">Panagiotis Charalampopoulos</a>.
 
-- [Principles Of Programming Languages & Compilers](#principles-of-programming-languages---compilers)
-  * [Project Objectives](#project-objectives)
-  * [Subgroup of the Microsoft Excel XML format](#subgroup-of-the-microsoft-excel-xml-format)
-  * [Backus–Naur form (BNF) Grammar](#backus-naur-form--bnf--grammar)
-  * [Compilation Instructions](#compilation-instructions)
-  * [Usage](#usage)
-  * [Screenshots](#screenshots)
+## Table Of Contents
+
+- [Project Objectives](#project-objectives)
+- [Subgroup of the Microsoft Excel XML format](#subgroup-of-the-microsoft-excel-xml-format)
+- [Backus–Naur form (BNF) Grammar](#backus-naur-form--bnf--grammar)
+- [Compilation Instructions](#compilation-instructions)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
 - [License](#license)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
